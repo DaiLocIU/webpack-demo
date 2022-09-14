@@ -1,1 +1,1 @@
-!function(){"use strict";console.log("navigaiton.js");var e=9;new Date>1e5&&(e=6);console.log("update a in thereee"),console.log("script.js in thereeee",e)}();
+!function(){"use strict";console.log("navigaiton.js");console.log(ledailoc);var e=9;new Date>1e5&&(e=6);console.log("update a in thereee"),console.log("test ahihi in there"),console.log("script.js in thereeee",e)}();//# sourceMappingURL=script.es5.js.map

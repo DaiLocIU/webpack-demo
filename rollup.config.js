@@ -7,6 +7,7 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import globals from 'rollup-plugin-node-globals';
 import builtins from 'rollup-plugin-node-builtins';
+import sourcemaps from 'rollup-plugin-sourcemaps';
 
 const out = [
     // browser-friendly UMD build
@@ -17,8 +18,10 @@ const out = [
             file: path.resolve(__dirname, 'assets/js/script.es5.js'),
             format: 'iife',
             compact: true,
+            sourcemap: true,
         },
         plugins: [
+            sourcemaps(),
             resolve({
                 browser: true,
             }),
@@ -43,13 +46,16 @@ const out = [
 
     {
         input: path.resolve(__dirname, 'assets/js/src'),
+
         output: {
             name: 'ScriptES6',
             file: path.resolve(__dirname, 'assets/js/script.es6.js'),
             format: 'iife',
             compact: true,
+            sourcemap: true,
         },
         plugins: [
+            sourcemaps(),
             resolve({
                 browser: true,
             }), // so Rollup can find `ms`

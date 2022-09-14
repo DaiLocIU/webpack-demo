@@ -8,6 +8,8 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
     },
+    devtool: 'inline-source-map',
+    mode: 'development',
     module: {
         rules: [
             {
@@ -18,10 +20,6 @@ module.exports = {
                     { loader: "postcss-loader", options: { sourceMap: true } },
                     'sass-loader',
                 ],
-            },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset',
             },
         ],
 
@@ -34,13 +32,15 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: "assets/js/script.es5.js",
+                    context: "assets/js/",
+                    from: "script.*.js",
                     to: "js"
                 },
                 {
-                    from: "assets/js/script.es6.js",
-                    to: "js"
-                }
+                    context: "assets/images/",
+                    from: "*",
+                    to: "images"
+                },
             ],
         }),
     ]
