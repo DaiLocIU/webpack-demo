@@ -1,0 +1,1 @@
+!function(){"use strict";console.log("navigaiton.js");let e=9;new Date>1e5&&(e=6);console.log("update a in thereee"),console.log("script.js in thereeee",e)}();

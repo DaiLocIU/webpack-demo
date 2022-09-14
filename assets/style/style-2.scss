@@ -1,0 +1,23 @@
+
+body {
+  background-color: #ff8144;
+  //background-image: url("../images/bg-no-image.jpg");
+  background-size: cover;
+}
+ul {
+
+  display: flex;
+  list-style: none;
+  li {
+    display: inline-block; margin: 0 10px;
+    a {
+      color: #377ab7; text-decoration: none;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+p.test {
+  color: yellow;
+}
